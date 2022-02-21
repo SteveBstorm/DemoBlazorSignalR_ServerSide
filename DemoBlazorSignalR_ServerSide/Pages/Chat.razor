@@ -1,0 +1,20 @@
+﻿@page "/chat"
+
+<h3>Chat</h3>
+<p>
+Votre nom : <input type="text" @bind="UserName" />
+</p>
+
+<p>Votre message : <input type="text" @bind="Message" /></p>
+
+<button @onclick="Send" disabled="@(!IsConnected)">Envoyer</button>
+
+<ul>
+    @foreach(string message in messages)
+    {
+        <li>@message</li>
+    }
+</ul>
+@code {
+
+}
